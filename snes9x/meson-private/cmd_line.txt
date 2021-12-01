@@ -1,0 +1,7 @@
+[options]
+prefix = /usr
+buildtype = release
+strip = True
+
+[properties]
+
