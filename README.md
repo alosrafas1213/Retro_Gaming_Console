@@ -9,6 +9,8 @@
 - [pip3](https://packages.debian.org/buster/python3-pip)
 - [python3-gi](https://packages.debian.org/sid/python3-gi)
 - [libopenjp2-7](https://packages.debian.org/sid/libopenjp2-7)
+- [ninja](https://ninja-build.org/)
+- [meson](https://mesonbuild.com/Quick-guide.html)
 ### Python Requierements
 
 - [Pillow](https://pypi.org/project/Pillow/)
