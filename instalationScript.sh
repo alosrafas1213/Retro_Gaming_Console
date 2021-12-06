@@ -7,6 +7,8 @@ fi
 
 apt install libsdl2-dev libgtkmm-3.0-dev libportaudio2 python3-gi libopenjp2-7 git ninja-build xorg python3-pip meson -y
 
+pip3 install -r requirements.txt
+
 git clone https://github.com/snes9xgit/snes9x.git
 
 cd snes9x
