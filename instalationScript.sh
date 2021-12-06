@@ -9,7 +9,11 @@ apt install libsdl2-dev libgtkmm-3.0-dev libportaudio2 python3-gi libopenjp2-7 g
 
 git clone https://github.com/snes9xgit/snes9x.git
 
-cd snes9x/gtk
+cd snes9x
+
+git submodule update --init --recursive
+
+cd gtk
 
 meson build --prefix=/usr --buildtype=release --strip
 
