@@ -14,4 +14,3 @@
 - [Pillow](https://pypi.org/project/Pillow/)
 - [Screeninfo](https://pypi.org/project/screeninfo/)
 - [piborg/Gamepad](https://github.com/piborg/Gamepad)
-- 
