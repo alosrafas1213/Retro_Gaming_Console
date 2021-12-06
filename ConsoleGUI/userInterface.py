@@ -17,7 +17,7 @@ class Handler:
         Gtk.main_quit()
 
     def onButtonPressed(self, button):
-        os.system("../snes9x/snes9x-gtk roms/" + button.get_name() + ".sfc")
+        os.system("snes9x-gtk roms/" + button.get_name() + ".sfc")
 
     def change_size(self, scroll):
         screen = get_monitors()[0]
