@@ -26,6 +26,8 @@ ninja
 
 ninja install
 
+mkdir /media/usb
+
 mkdir /opt/retro
 
 cp usbManagement.sh /opt/retro
