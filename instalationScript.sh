@@ -32,4 +32,6 @@ mkdir /opt/retro
 
 cp usbManagement.sh /opt/retro
 
+chmod 766 /opt/retro/usbManagement.sh
+
 echo KERNEL=="sd?1", ATTRS{idVendor}=="*", ATTRS{idProduct}=="*", ATTRS{serial}=="*", SYMLINK+="usb", RUN+="/opt/retro/usbManagement.sh" | sudo tee --append /etc/udev/rules.d/81-thumbdrive.rules
