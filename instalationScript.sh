@@ -25,3 +25,9 @@ cd build
 ninja
 
 ninja install
+
+mkdir /opt/retro
+
+cp usbManagement.sh /opt/retro
+
+echo KERNEL=="sd?1", ATTRS{idVendor}=="*", ATTRS{idProduct}=="*", ATTRS{serial}=="*", SYMLINK+="usb", RUN+="/opt/retro/usbManagement.sh" | sudo tee --append /etc/udev/rules.d/81-thumbdrive.rules
