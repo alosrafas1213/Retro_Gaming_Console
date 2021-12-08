@@ -17,7 +17,7 @@ def resize1(file):
 
 
 def headerSize():
-    file = 'images/snes9x.jpg'
+    file = 'resizedImages/snes9xResized.jpg'
     image = Image.open(file)
     return image.size[1]
 
