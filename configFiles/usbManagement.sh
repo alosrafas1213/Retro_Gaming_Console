@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 5
+
 devicesList=`blkid | grep '/dev/sd' | cut -d ":" -f 1`
 IFS=$'\n' read -rd '' -a devicearray <<<"$devicesList"
 
@@ -23,11 +25,23 @@ for i in "${devicearray[@]}"; do
         echo se monta $i >> /home/pi/testo.txt
         mkdir -p /media/usb$count
         mount $i /media/usb$count
+        sleep 5
         if [[ -d /media/usb$count/roms ]]
         then
             files=`ls /media/usb$count/roms/*.sfc | wc -l`
-            filesnum = $(( $filesnum + $files ))
+            filesnum=$(( $filesnum + $files ))
             cp /media/usb$count/roms/*.sfc /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
+        fi
+
+        if [[ -d /media/usb$count/roms ]]
+                then
+            files=`ls /media/usb$count/roms/*.sfc | wc -l`
+            filesnum=$(( $filesnum + $files ))
+            cp /media/usb$count/roms/*.sfc /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
+        fi
+
+        if [[ -d /media/usb$count/roms ]]
+        then
             cp /media/usb$count/covers/*.png /home/pi/Retro_Gaming_Console/ConsoleGUI/newImages/
         fi
         count=$(( $count + 1 ))
@@ -40,5 +54,5 @@ chown -R pi:pi /home/pi/Retro_Gaming_Console/ConsoleGUI/newImages/
 if [[ "$filesnum" -gt "0" ]]
 then
     export DISPLAY=:0
-    xinit rebootScreen.py
+    /opt/retro/rebootScreen.py
 fi
