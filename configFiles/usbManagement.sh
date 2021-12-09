@@ -9,6 +9,7 @@ IFS=$'\n' read -rd '' -a mountedArray <<<"$mountedDevices"
 
 count=1
 cond=0
+filesnum=0
 
 for i in "${devicearray[@]}"; do
     for j in "${mountedArray[@]}"; do
@@ -24,9 +25,19 @@ for i in "${devicearray[@]}"; do
         mount $i /media/usb$count
         if [[ -d /media/usb$count/roms ]]
         then
-            cp /media/usb$count/roms/*.sfc /home/pi/roms/
+            files=`ls /media/usb$count/roms/*.sfc | wc -l`
+            filesnum = $(( $filesnum + $files ))
+            cp /media/usb$count/roms/*.sfc /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
+            cp /media/usb$count/covers/*.png /home/pi/Retro_Gaming_Console/ConsoleGUI/newImages/
         fi
         count=$(( $count + 1 ))
     fi
 done
 
+chown -R pi:pi /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
+chown -R pi:pi /home/pi/Retro_Gaming_Console/ConsoleGUI/newImages/
+
+if [[ "$filesnum" -gt "0" ]]
+    export DISPLAY=:0
+    xinit rebootScreen.py
+fi

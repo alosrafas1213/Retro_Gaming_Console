@@ -6,36 +6,52 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 apt update
-apt install libsdl2-dev libgtkmm-3.0-dev libportaudio2 python3-gi libopenjp2-7 git ninja-build xorg python3-pip meson libjpeg-dev zlib1g-dev cmake extra-cmake-modules qttools5-dev qttools5-dev-tools libsdl2-dev libxi-dev libxtst-dev libx11-dev itstool gettext -y
+apt install libsdl2-dev libgtkmm-3.0-dev libportaudio2 python3-gi libopenjp2-7 git ninja-build xorg python3-pip meson libjpeg-dev zlib1g-dev cmake extra-cmake-modules qttools5-dev qttools5-dev-tools libqt5x11extras5-dev libsdl2-dev libxi-dev libxtst-dev libx11-dev itstool gettext fbi -y
 
 pip3 install pillow
 pip3 install screeninfo
 
-cp configFiles/gamepadmouse.gamecontroller.amgp ~/gamepadmouse.gamecontroller.amgp
+cp configFiles/gamepadmouse.gamecontroller.amgp /home/$SUDO_USER/gamepadmouse.gamecontroller.amgp
 
 mkdir -p /opt/retro
 
-cp configFiles/start.sh ~/
+cp configFiles/start.sh /home/$SUDO_USER
 
 cp configFiles/retro.service /etc/systemd/system/retro.service
 
-chmod 644/etc/systemd/system/retro.service
+chmod 644 /etc/systemd/system/retro.service
 
 cp configFiles/usbManagement.sh /opt/retro
 
+cp configFiles/rebootScreen.py /opt/retro
+
+cp configFiles/newGame.glade /opt/retro
+
+cp cofigFiles/splash.service /etc/systemd/system/
+
+mkdir -p /usr/share/plymouth/themes/pix/
+
+cp configFiles/bootImage.jpg /usr/share/plymouth/themes/pix/
+
+cp configFiles/bootImage.jpg /opt/retro
+
 chmod 755 /opt/retro/usbManagement.sh
 
-mkdir -p ~/.config/snes9x
+chmod 755 /opt/retro/rebootScreen.py
 
-mkdir -p ~/.config/antimicrox
+mkdir -p /home/$SUDO_USER/.config/snes9x
 
-cp configFiles/snes9x.conf ~/.config/snes9x/snes9x.conf
+mkdir -p /home/$SUDO_USER/.config/antimicrox
 
-cp configFiles/antimicrox_settings.ini ~/.config/antimicrox/antimicrox_settings.ini
+cp configFiles/snes9x.conf /home/$SUDO_USER/.config/snes9x/snes9x.conf
 
-chown -R $USER:$USER ~/.config/
+cp configFiles/antimicrox_settings.ini /home/$SUDO_USER/.config/antimicrox/antimicrox_settings.ini
 
-cd
+chown -R $SUDO_USER:$SUDO_USER /home/$SUDO_USER/.config/
+
+cd /home/$SUDO_USER
+
+export GIT_SSL_NO_VERIFY=1
 
 git clone https://github.com/snes9xgit/snes9x.git
 
@@ -53,19 +69,29 @@ ninja
 
 ninja install
 
-echo KERNEL=="sd*[!0-9]|sr*", ENV{ID_SERIAL}!="?*", SUBSYSTEMS=="usb", RUN+="/opt/retro/usbManagement.sh" | sudo tee --append /etc/udev/rules.d/10-usb.rules
+#echo KERNEL=="sd*[!0-9]|sr*", ENV{ID_SERIAL}!="?*", SUBSYSTEMS=="usb", RUN+="/opt/retro/usbManagement.sh" | sudo tee --append /etc/udev/rules.d/10-usb.rules
 
-cd
+cd /home/$SUDO_USER
 
 git clone https://github.com/juliagoda/antimicroX.git
 
-cd antimicrox
-mkdir build && cd build
+cd antimicroX
+mkdir -p build && cd build
 cmake ..
 cmake --build .
 
 cat /lib/systemd/system/systemd-udevd.service | sed -e "s/PrivateMounts=yes/PrivateMounts=no/" > temp.txt
 
 mv temp.txt /lib/systemd/system/systemd-udevd.service
+
+echo "/home/pi/start.sh 2>/dev/null" >> /home/$SUDO_USER/.bashrc
+
+cat /boot/cmdline.txt | sed -e "s/console=tty1/console=serial0/" > temp2.txt
+
+mv temp2.txt /boot/cmdline.txt
+
+systemctl disable getty@tty1
+
+systemctl enable splash
 
 reboot
