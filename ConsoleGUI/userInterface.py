@@ -48,7 +48,7 @@ class newButton(Gtk.Button):
         return button
 
 def gamepadMouse():
-    os.system("~/antimicroX/build/bin/antimicroX --hidden")
+    os.system("~/antimicroX/build/bin/antimicrox --hidden")
 
 def snes_resolution():
     screen = get_monitors()[0]
