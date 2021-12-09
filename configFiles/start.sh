@@ -1,4 +1,4 @@
 cd proyecto/ConsoleGUI
 
-xinit -g 1:1 /home/pi/proyecto/ConsoleGUI/userInterface.py
+xinit -g 1:1 /home/pi/Retro_Gaming_Console/ConsoleGUI/userInterface.py
 
