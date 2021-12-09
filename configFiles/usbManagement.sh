@@ -38,6 +38,7 @@ chown -R pi:pi /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
 chown -R pi:pi /home/pi/Retro_Gaming_Console/ConsoleGUI/newImages/
 
 if [[ "$filesnum" -gt "0" ]]
+then
     export DISPLAY=:0
     xinit rebootScreen.py
 fi
