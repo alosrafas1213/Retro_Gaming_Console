@@ -17,10 +17,6 @@ mkdir -p /opt/retro
 
 cp configFiles/start.sh /home/$SUDO_USER
 
-cp configFiles/retro.service /etc/systemd/system/retro.service
-
-chmod 644 /etc/systemd/system/retro.service
-
 cp configFiles/usbManagement.sh /opt/retro
 
 cp configFiles/rebootScreen.py /opt/retro
