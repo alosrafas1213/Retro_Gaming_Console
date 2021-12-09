@@ -31,6 +31,8 @@ cp cofigFiles/splash.service /etc/systemd/system/
 
 mkdir -p /usr/share/plymouth/themes/pix/
 
+mkdir ConsoleGUI/newRoms
+
 cp configFiles/bootImage.jpg /usr/share/plymouth/themes/pix/
 
 cp configFiles/bootImage.jpg /opt/retro
