@@ -71,9 +71,9 @@ echo KERNEL=="sd*[!0-9]|sr*", ENV{ID_SERIAL}!="?*", SUBSYSTEMS=="usb", RUN+="/op
 
 cd /home/$SUDO_USER
 
-git clone https://github.com/juliagoda/antimicroX.git
+git clone https://github.com/AntiMicroX/antimicrox.git
 
-cd antimicroX
+cd antimicrox
 mkdir -p build && cd build
 cmake ..
 cmake --build .
