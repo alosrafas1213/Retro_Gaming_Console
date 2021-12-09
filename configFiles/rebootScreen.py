@@ -11,13 +11,13 @@ class Handler:
         Gtk.main_quit()
 
     def on_rebootButton_clicked(self, button):
-        os.system("sudo reboo")
+        os.system("sudo reboot")
 
     def on_acceptButton_clicked(self, button):
         Gtk.main_quit()
 
 builder = Gtk.Builder()
-builder.add_from_file("newGame.glade")
+builder.add_from_file("/opt/retro/newGame.glade")
 builder.connect_signals(Handler())
 
 window = builder.get_object("window1")
