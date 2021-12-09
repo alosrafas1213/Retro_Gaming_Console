@@ -27,7 +27,7 @@ cp configFiles/rebootScreen.py /opt/retro
 
 cp configFiles/newGame.glade /opt/retro
 
-cp cofigFiles/splash.service /etc/systemd/system/
+cp configFiles/splash.service /etc/systemd/system/
 
 mkdir -p /usr/share/plymouth/themes/pix/
 
