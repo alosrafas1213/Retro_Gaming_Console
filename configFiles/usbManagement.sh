@@ -33,14 +33,7 @@ for i in "${devicearray[@]}"; do
             cp /media/usb$count/roms/*.sfc /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
         fi
 
-        if [[ -d /media/usb$count/roms ]]
-                then
-            files=`ls /media/usb$count/roms/*.sfc | wc -l`
-            filesnum=$(( $filesnum + $files ))
-            cp /media/usb$count/roms/*.sfc /home/pi/Retro_Gaming_Console/ConsoleGUI/newRoms/
-        fi
-
-        if [[ -d /media/usb$count/roms ]]
+        if [[ -d /media/usb$count/covers ]]
         then
             cp /media/usb$count/covers/*.png /home/pi/Retro_Gaming_Console/ConsoleGUI/newImages/
         fi
