@@ -84,12 +84,16 @@ mv temp.txt /lib/systemd/system/systemd-udevd.service
 
 echo "/home/pi/start.sh 2>/dev/null" >> /home/$SUDO_USER/.bashrc
 
+sed -i 's/console=serial0/console=tty0/g' /boot/cmdline.txt
+
 cat /boot/cmdline.txt | sed -e "s/console=tty1/console=serial0/" > temp2.txt
 
 mv temp2.txt /boot/cmdline.txt
 
-systemctl disable getty@tty1
+cat /boot/cmdline.txt | sed -e "s/console=serial0/console=tty0/" > temp2.txt
 
-systemctl enable splash
+mv temp2.txt /boot/cmdline.txt
+
+#systemctl enable splash
 
 reboot
