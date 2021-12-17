@@ -109,7 +109,10 @@ list2 = os.listdir("newImages")
 for images in list:
     resize2("images/"+images)
 
-if len(list)>0:
+if len(list2)>0:
+    for images in list2:
+        os.rename("newImages/"+n,"newImages/"+n.replace(" ",""))
+    list = os.listdir("newRoms")
     for images in list2:
         resizeNewImages("newImages/"+images)
 
