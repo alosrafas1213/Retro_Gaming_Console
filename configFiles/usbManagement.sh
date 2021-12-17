@@ -9,7 +9,6 @@ mountedDevices=`df -h | grep "/dev/sd" | cut -d " " -f 1`
 
 IFS=$'\n' read -rd '' -a mountedArray <<<"$mountedDevices"
 
-count=1
 cond=0
 filesnum=0
 
