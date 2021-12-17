@@ -94,6 +94,8 @@ cat /boot/cmdline.txt | sed -e "s/console=serial0/console=tty0/" > temp2.txt
 
 mv temp2.txt /boot/cmdline.txt
 
+echo "export count=1" >> /etc/profile
+
 #systemctl enable splash
 
 reboot
