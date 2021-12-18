@@ -16,3 +16,9 @@
 - [Pillow](https://pypi.org/project/Pillow/)
 - [Screeninfo](https://pypi.org/project/screeninfo/)
 - [piborg/Gamepad](https://github.com/piborg/Gamepad)
+
+
+## Instalation
+
+The easy way, execute the instalationScript.sh, the hard way, follow the actions of the instalationScript.sh file line by line
+
