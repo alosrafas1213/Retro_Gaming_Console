@@ -1,0 +1,9 @@
+[Unit]
+Description=X Service for Retro console GUI
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/pi/start.sh
+
+[Install]
+WantedBy=multi-user.target

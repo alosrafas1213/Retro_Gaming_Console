@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="DonkeyKongCountry">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/DonkeyKongCountryResized.png</property>
+  </object>
+  <object class="GtkImage" id="DonkeyKongCountry2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/DonkeyKongCountry2Resized.png</property>
+  </object>
+  <object class="GtkImage" id="DonkeyKongCountry3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/DonkeyKongCountry3Resized.png</property>
+  </object>
+  <object class="GtkImage" id="kirby">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/KirbySuperStarResized.png</property>
+  </object>
+  <object class="GtkImage" id="marioKart">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/SuperMarioKartResized.png</property>
+  </object>
+  <object class="GtkImage" id="marioWorld">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/SuperMarioWorldResized.png</property>
+  </object>
+  <object class="GtkImage" id="megaMan7">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/MegaMan7Resized.png</property>
+  </object>
+  <object class="GtkImage" id="megaManSoccer">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/MegaManSoccerResized.png</property>
+  </object>
+  <object class="GtkImage" id="megaManX">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/MegaManXResized.png</property>
+  </object>
+  <object class="GtkImage" id="megaManX2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/MegaManX2Resized.png</property>
+  </object>
+  <object class="GtkImage" id="megaManX3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/MegaManX3Resized.png</property>
+  </object>
+  <object class="GtkImage" id="superMetroid">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/SuperMetroidResized.png</property>
+  </object>
+  <object class="GtkImage" id="tetris">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/TetrisDrMarioResized.png</property>
+  </object>
+  <object class="GtkImage" id="yoshisIsland">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/YoshisIslandResized.png</property>
+  </object>
+  <object class="GtkImage" id="zelda">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">resizedImages/ZeldaLinkPastResized.png</property>
+  </object>
+  <object class="GtkWindow" id="window1">
+    <property name="name">window1</property>
+    <property name="can_focus">False</property>
+    <property name="hide_titlebar_when_maximized">True</property>
+    <property name="deletable">False</property>
+    <signal name="check-resize" handler="change_size" object="scroll" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkGrid" id="grid1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="column_homogeneous">True</property>
+        <child>
+          <object class="GtkImage" id="snes">
+            <property name="name">logoSnes</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">resizedImages/snes9xResized.jpg</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scroll">
+            <property name="name">scrolledwindow</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkGrid" id="gamesGrid">
+                    <property name="name">gamesGrid</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="column_homogeneous">True</property>
+                    <child>
+                      <object class="GtkButton" id="marioWorldButton">
+                        <property name="name">SuperMarioWorld</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">marioWorld</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="marioKartButton">
+                        <property name="name">SuperMarioKart</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">marioKart</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="DonkeyKongCountryButton">
+                        <property name="name">DonkeyKongCountry</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">DonkeyKongCountry</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="DonkeyKongCountry2Button">
+                        <property name="name">DonkeyKongCountry2</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">DonkeyKongCountry2</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="DonkeyKongCountry3Button">
+                        <property name="name">DonkeyKongCountry3</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">DonkeyKongCountry3</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="yoshisIslandButton">
+                        <property name="name">SuperMarioWorld2</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">yoshisIsland</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">3</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="tetrisButton">
+                        <property name="name">TetrisDrMario</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">tetris</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="zeldaButton">
+                        <property name="name">ZeldaLinkPast</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">zelda</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="kirbyButton">
+                        <property name="name">KirbySuperStar</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">kirby</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="superMetroidButton">
+                        <property name="name">SuperMetroid</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">superMetroid</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">3</property>
+                        <property name="top_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="megaManXButton">
+                        <property name="name">MegaManX</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">megaManX</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">4</property>
+                        <property name="top_attach">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="megaManX2Button">
+                        <property name="name">MegaManX2</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">megaManX2</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">4</property>
+                        <property name="top_attach">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="megaManX3Button">
+                        <property name="name">MegaManX3</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">megaManX3</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="megaMan7Button">
+                        <property name="name">MegaMan7</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">megaMan7</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">3</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="megaManSoccerButton">
+                        <property name="name">MegaManSoccer</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="image">megaManSoccer</property>
+                        <property name="image_position">bottom</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="clicked" handler="onButtonPressed" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="left_attach">4</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

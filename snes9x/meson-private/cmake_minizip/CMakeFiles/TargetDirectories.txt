@@ -1,2 +1,0 @@
-/home/pi/Documents/proyectoEmbebidos/snes9x/gtk/build/meson-private/cmake_minizip/CMakeFiles/rebuild_cache.dir
-/home/pi/Documents/proyectoEmbebidos/snes9x/gtk/build/meson-private/cmake_minizip/CMakeFiles/edit_cache.dir

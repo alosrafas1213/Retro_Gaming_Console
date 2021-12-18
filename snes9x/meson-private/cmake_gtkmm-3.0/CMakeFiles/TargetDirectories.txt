@@ -1,2 +1,0 @@
-/home/pi/Documents/proyectoEmbebidos/snes9x/gtk/build/meson-private/cmake_gtkmm-3.0/CMakeFiles/rebuild_cache.dir
-/home/pi/Documents/proyectoEmbebidos/snes9x/gtk/build/meson-private/cmake_gtkmm-3.0/CMakeFiles/edit_cache.dir
