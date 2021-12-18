@@ -11,6 +11,23 @@
 - [libopenjp2-7](https://packages.debian.org/sid/libopenjp2-7)
 - [ninja](https://ninja-build.org/)
 - [meson](https://mesonbuild.com/Quick-guide.html)
+
+
+## Antimicrox Requiered Dependencies
+
+cmake extra-cmake-modules qttools5-dev qttools5-dev-tools libqt5x11extras5-dev libsdl2-dev libxi-dev libxtst-dev libx11-dev itstool 
+- [gettext](https://www.gnu.org/software/gettext/)
+- [cmake](https://cmake.org/)
+- [extra-cmake-modules](https://github.com/KDE/extra-cmake-modules)
+- [qttools5-dev](https://packages.debian.org/stretch/qttools5-dev-tools)
+- [qttools5-dev-tools](https://packages.debian.org/stretch/qttools5-dev-tools)
+- [libqt5x11extras5-dev](https://packages.debian.org/stretch/libqt5x11extras5-dev)
+- [libsdl2-dev](https://packages.debian.org/sid/libsdl2-dev)
+- [libxi-dev](https://packages.debian.org/sid/libxi-dev)
+- [libxtst-dev](https://packages.debian.org/sid/libxtst-dev)
+- [libx11-dev](https://packages.debian.org/sid/libx11-dev)
+- [itstool](http://itstool.org/)
+
 ### Python Requierements
 
 - [Pillow](https://pypi.org/project/Pillow/)
