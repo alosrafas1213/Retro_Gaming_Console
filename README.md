@@ -34,7 +34,7 @@
 - [piborg/Gamepad](https://github.com/piborg/Gamepad)
 
 
-## Instalation
+## Installation
 
 The easy way, execute the instalationScript.sh, the hard way, follow the actions of the instalationScript.sh file line by line
 
