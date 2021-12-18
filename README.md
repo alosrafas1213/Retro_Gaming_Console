@@ -15,7 +15,6 @@
 
 ## Antimicrox Requiered Dependencies
 
-cmake extra-cmake-modules qttools5-dev qttools5-dev-tools libqt5x11extras5-dev libsdl2-dev libxi-dev libxtst-dev libx11-dev itstool 
 - [gettext](https://www.gnu.org/software/gettext/)
 - [cmake](https://cmake.org/)
 - [extra-cmake-modules](https://github.com/KDE/extra-cmake-modules)
