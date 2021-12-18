@@ -29,9 +29,9 @@ mkdir -p /usr/share/plymouth/themes/pix/
 
 mkdir ConsoleGUI/newRoms
 
-cp configFiles/bootImage.jpg /usr/share/plymouth/themes/pix/
+cp configFiles/bootImage.png /usr/share/plymouth/themes/pix/
 
-cp configFiles/bootImage.jpg /opt/retro
+cp configFiles/bootImage.png /opt/retro
 
 chmod 755 /opt/retro/usbManagement.sh
 
