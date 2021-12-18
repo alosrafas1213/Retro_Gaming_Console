@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 apt update
-apt install libsdl2-dev libgtkmm-3.0-dev libportaudio2 python3-gi libopenjp2-7 git ninja-build xorg python3-pip meson libjpeg-dev zlib1g-dev cmake extra-cmake-modules qttools5-dev qttools5-dev-tools libqt5x11extras5-dev libsdl2-dev libxi-dev libxtst-dev libx11-dev itstool gettext fbi -y
+apt install libsdl2-dev libgtkmm-3.0-dev libportaudio2 python3-gi libopenjp2-7 git ninja-build xorg python3-pip meson libjpeg-dev zlib1g-dev cmake extra-cmake-modules qttools5-dev qttools5-dev-tools libqt5x11extras5-dev libsdl2-dev libxi-dev libxtst-dev libx11-dev itstool gettext -y
 
 pip3 install pillow
 pip3 install screeninfo
@@ -23,15 +23,7 @@ cp configFiles/rebootScreen.py /opt/retro
 
 cp configFiles/newGame.glade /opt/retro
 
-cp configFiles/splash.service /etc/systemd/system/
-
-mkdir -p /usr/share/plymouth/themes/pix/
-
 mkdir ConsoleGUI/newRoms
-
-cp configFiles/bootImage.png /usr/share/plymouth/themes/pix/
-
-cp configFiles/bootImage.png /opt/retro
 
 chmod 755 /opt/retro/usbManagement.sh
 
@@ -89,7 +81,5 @@ cat /boot/cmdline.txt | sed -e "s/console=serial0,115200 console=tty1/console=tt
 mv temp2.txt /boot/cmdline.txt
 
 echo "export count=1" >> /etc/profile
-
-systemctl splash.service
 
 reboot
