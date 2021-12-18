@@ -1,6 +1,6 @@
 # SNES Retro Gaming Console
 
-## Requiered Dependencies
+## Snes9x Requiered Dependencies
 
 - [libsdl2-dev](https://packages.debian.org/sid/libsdl2-dev)
 - [libgtkmm-3.0-dev](https://packages.debian.org/buster/libgtkmm-3.0-dev)
